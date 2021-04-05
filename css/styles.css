@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c3cfe2;
+}
+
+.testimonial-container {
+    display: flex;
+    background: #fff;
+    margin: 60px auto;
+    height: 90vh;
+    width: 40vw;
+    border: solid 10px black;
+    border-radius: 20px;
+    padding: 25px 80px;
+}
+
+.testimonial {
+    text-align: justify;
+    line-height: 30px;
+    font-size: 1.7em;
+}
+
+.centered-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile img {
+
+
+
+    height: 50px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.box2{
+   position: relative;
+
+}
+.footer {
+    width: 500px;
+    background-color: #686de0;
+    height: 450px;
+
+
+}
