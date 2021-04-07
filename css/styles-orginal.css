@@ -9,15 +9,14 @@ body {
 }
 
 .container {
-    margin: 50px auto;
-    /*om de blok te centreren*/
+    margin: 50px auto; /*om de blok te centreren*/
     height: 90vh;
     width: 40vw;
     background-image: linear-gradient(to bottom left, lightsteelblue, white);
-    padding: 25px;
+    padding: 25px 25px;
 }
 
-.container__testimonial {
+.testimonial {
     height: 75%;
     width: 100%;
     background: #fff;
@@ -25,48 +24,49 @@ body {
     line-height: 2em;
     font-size: 1.5em;
     font-family: sans-serif;
-    border-radius: 20px 20px 0 0;
-    /* border-corners aan onderkant scherp om aan te sluiten op footer */
+    border-radius:  20px 20px 0px 0px; /* border-corners aan onderkant scherp om aan te sluiten op footer */
     padding: 50px 40px;
+
 }
 
-.container__footer {
-    height: 25%;
-    /* wat overblijft van testimonial */
-    width: 100%;
-    background-color: #686de0;
-    border-radius: 0 0 20px 20px;
-    /* border-corners aan bovenkant scherp om aan te sluiten op testimonial */
-}
-
-.container__footer__centered-items {
+.centered-items {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: -65%;
-    /* schuift hele div incl. foto naar boven voor de helft van de foto plus margin. */
+    top:-65%; /* schuift hele div incl. foto naar boven voor de helft van de foto plus margin. */
+
 }
 
-.container__footer__centered-items__profile {
+.profile {
     height: 150px;
     margin: 30px;
     border-radius: 50%;
     border: solid 5px white;
 }
 
-.container__footer__user-details__myName {
-    margin: 10px;
+
+.user-details .myName {
     font-family: sans-serif;
     color: white;
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin: 10px;
 }
-
-.container__footer__link {
+.link {
     margin: 10px;
     font-family: sans-serif;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing:3px;
     text-decoration: none;
+
+}
+
+
+
+.footer {
+    height: 25%; /* wat overblijft van testimonial */
+    width: 100%;
+    background-color: #686de0;
+    border-radius:  0px 0px 20px 20px; /* border-corners aan bovenkant scherp om aan te sluiten op testimonial */
 }
