@@ -39,6 +39,10 @@ body {
     /* border-corners aan bovenkant scherp om aan te sluiten op testimonial */
 }
 
+.container__footer:hover {
+    background: purple;
+}
+
 .container__footer__centered-items {
     position: relative;
     display: flex;

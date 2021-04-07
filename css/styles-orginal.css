@@ -46,7 +46,7 @@ body {
 }
 
 
-.user-details .myName {
+.user-details, .myName {
     font-family: sans-serif;
     color: white;
     text-transform: uppercase;
