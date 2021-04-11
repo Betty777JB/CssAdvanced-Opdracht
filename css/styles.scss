@@ -45,13 +45,13 @@ body {
             display: flex;
             align-items: center;
             flex-direction: column;
-            top: -65%;
+            top: -85px;
             /* schuift hele div incl. foto naar boven voor de helft van de foto plus margin. */
         }
 
         &__centered-items__profile {
             height: 150px;
-            margin: 30px;
+            margin: 10px;
             border-radius: 50%;
             border: solid 5px $footerTextColor;
         }
