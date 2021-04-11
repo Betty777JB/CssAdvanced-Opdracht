@@ -1,4 +1,4 @@
-$footerTextColor:white;
+@import "variables";
 
 * {
     margin: 0;
@@ -7,69 +7,93 @@ $footerTextColor:white;
 }
 
 body {
-    background-color: #c3cfe2;
+    background-color: $PageBGColor;
+    font-size: 12px;
+
 }
 
 .container {
-    margin: 50px auto;/*om de blok te centreren*/
+    margin: 50px auto;
+    /*om de blok te centreren*/
     height: 90vh;
-    width: 40vw;
-    background-image: linear-gradient(to bottom left, lightsteelblue, white);
+    width: 90vw;
+    background-image: linear-gradient(to bottom left, $CardBGGradColor, $CardColor);
     padding: 25px;
 
     &__testimonial {
-        height: 75%;
+        height: 100%-$FooterHeight;
         width: 100%;
-        background: #fff;
+        background: $CardColor;
         text-align: justify;
-        line-height: 2em;
+        line-height: 1.5em;
         font-size: 1.5em;
         font-family: sans-serif;
-        border-radius: 20px 20px 0 0;/* border-corners aan onderkant scherp om aan te sluiten op footer */
+        border-radius: $CardRadius $CardRadius 0 0;
+        /* border-corners aan onderkant scherp om aan te sluiten op footer */
         padding: 50px 40px;
     }
 
     &__footer {
-        height: 25%;
+        height: $FooterHeight;
         /* wat overblijft van testimonial */
         width: 100%;
-        background-color: #686de0;
-        border-radius: 0 0 20px 20px;
-        &:hover {
-            background: purple;
-        }
-     /* border-corners aan bovenkant scherp om aan te sluiten op testimonial */
+        background-color: $footerBGColor;
+        border-radius: 0 0 $CardRadius $CardRadius;
 
+        &:hover {
+            background: $footerHoverColor;
+        }
+        /* border-corners aan bovenkant scherp om aan te sluiten op testimonial */
         &__centered-items {
             position: relative;
             display: flex;
             align-items: center;
             flex-direction: column;
-            top: -85px;
+            top: -($PhotoHeight/2 + $PhotoMargin);
             /* schuift hele div incl. foto naar boven voor de helft van de foto plus margin. */
-        }
+            &__profile {
+                height: $PhotoHeight;
+                margin: $PhotoMargin;
+                border-radius: 50%;
+                border: solid 5px $footerTextColor;
+            }
 
-        &__centered-items__profile {
-            height: 150px;
-            margin: 10px;
-            border-radius: 50%;
-            border: solid 5px $footerTextColor;
-        }
+            &__user-details {
+                &__myName {
+                    margin: 10px;
+                    font-family: sans-serif;
+                    color: $footerTextColor;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                }
+            }
 
-        &__user-details__myName {
-            margin: 10px;
-            font-family: sans-serif;
-            color: $footerTextColor;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-        &__link{
-            margin: 10px;
-            font-family: sans-serif;
-            color: $footerTextColor;
-            letter-spacing:3px;
-            text-decoration: none;
-
+            &__link {
+                margin: 10px;
+                font-family: sans-serif;
+                color: $footerTextColor;
+                letter-spacing: 3px;
+                text-decoration: none;
+            }
         }
     }
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .container {
+     width: 60vw;
+
+     &__testimonial{
+     line-height: 2em;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 40vw;
+
+    }
+
 }
