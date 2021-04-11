@@ -1,0 +1,6 @@
+@mixin social-buttons ($SMType) {
+    content: $SMType;
+    margin-left: 30px;
+    font-size: 0.75em;
+
+}

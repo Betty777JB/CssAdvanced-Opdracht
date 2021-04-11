@@ -1,0 +1,83 @@
+@import "sass/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c3cfe2;
+}
+
+.social-media-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style-type: none;
+
+        li {
+            a {
+                width: 75px;
+                padding: 10px;
+                font-size: 2.5em;
+                color: white;
+                text-decoration: none;
+                text-align: left;
+                margin-left: 15px;
+
+                &:hover {
+                    width: 300px;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+
+        &__blog {
+            background-color: #e17b77;
+
+            &:hover ::after {
+                @include social-buttons ("Blog");
+            }
+        }
+
+        &__twitter {
+            background-color: #00aced;
+
+            &:hover ::after {
+                @include social-buttons ("Twitter");
+            }
+        }
+
+        &__linkedin {
+            background-color: #007bb6;
+
+            &:hover ::after {
+                @include social-buttons ("Linkedin");
+            }
+        }
+
+        &__facebook {
+            background-color: #3b5998;
+
+            &:hover ::after {
+                @include social-buttons ("Facebook");
+            }
+        }
+
+        &__github {
+            background-color: #333;
+
+            &:hover ::after {
+                @include social-buttons ("Github");
+            }
+        }
+    }
+}

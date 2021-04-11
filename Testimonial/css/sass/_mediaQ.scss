@@ -1,0 +1,16 @@
+@media screen and (min-width: 600px) {
+    .container {
+     width: 60vw;
+
+     &__testimonial{
+     line-height: 2em;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 40vw;
+
+    }
+
+}
